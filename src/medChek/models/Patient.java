@@ -10,6 +10,9 @@ public class Patient {
     private int age;
     private Gender gender;
 
+    public Patient() {
+    }
+
     public Patient( String firstName, String lastName, int age, Gender gender) {
         this.id = IdGenerator.genPatient();
         this.firstName = firstName;

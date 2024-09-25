@@ -24,7 +24,11 @@ public class PatientServiceImpl implements PatientService, GenericService<Patien
 
     @Override
     public Patient getPatientById(Long id) {
+        try{
         return patientDao.getPatientById(id);
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }return null;
     }
 
     @Override

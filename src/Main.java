@@ -62,11 +62,12 @@ public class Main {
         System.out.println(patientService.getPatientById(7L));
 
         System.out.println("remove patient by id");
-            patientService.removeById(123L);
+            patientService.removeById(7L);
+        System.out.println(patientService.getPatientById(7L));
 
         System.out.println("sort patient by age  ASC");
 
-        patientService.sortPatientsByAge("asc").forEach(patient -> System.out.println(patient.getFirstName() + " - Age: " + patient.getAge()));
+        patientService.sortPatientsByAge("desc").forEach(patient -> System.out.println(patient.getFirstName() + " - Age: " + patient.getAge()));
     }
 
 
